@@ -27,7 +27,7 @@ let addToCart=function(foodId){
     quantity: 1 
   };
   console.log(requestData)
-  axios.post("http://localhost:8080/efarmers/add_cart_item",requestData).then(response=>{
+  axios.post("https://farmersapp-backend-d740c4e55b12.herokuapp.com/efarmers/add_cart_item",requestData).then(response=>{
     console.log(response.data);
      
 }).catch(err=>{
@@ -37,7 +37,7 @@ console.log("we get error in adding the data into cart."  + err);
 
 
 let getUser=()=>{
-  axios.get("http://localhost:8080/efarmers/get_items").then(response=>{
+  axios.get("https://farmersapp-backend-d740c4e55b12.herokuapp.com/efarmers/get_items").then(response=>{
           
         for(let item of response.data){
           if(item.foodtype==="vegetables"){
