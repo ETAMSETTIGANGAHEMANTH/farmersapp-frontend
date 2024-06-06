@@ -11,7 +11,7 @@ function UserLoginStore({ children }) {
 
   const loginUser = (userCredentialsObj) => {
     console.log(userCredentialsObj);
-    axios.post("http://localhost:8080/efarmers/credentials", userCredentialsObj).then(response => {
+    axios.post("https://farmersapp-backend-d740c4e55b12.herokuapp.com/efarmers/credentials", userCredentialsObj).then(response => {
       if (response.data.success === true) {
         localStorage.setItem("token", response.data.token);
         setCurrentUser(response.data.user);
