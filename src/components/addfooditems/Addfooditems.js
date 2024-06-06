@@ -11,7 +11,7 @@ function Addfooditems() {
 
   let submitForm=(fd)=>{
     console.log(fd);
-    axios.post("http://localhost:8080/efarmers/add_food_item",fd).then(response=>{
+    axios.post("https://farmersapp-backend-d740c4e55b12.herokuapp.com/efarmers/add_food_item",fd).then(response=>{
      console.log(response.data=="saved");
        navigate("/Menu")
     }).catch(err=>{
