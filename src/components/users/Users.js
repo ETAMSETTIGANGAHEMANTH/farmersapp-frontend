@@ -12,7 +12,7 @@ function User() {
     let number = 1;
 
     useEffect(()=>{
-        axios.get("http://localhost:8080/efarmers/getallusers")
+        axios.get("https://farmersapp-backend-d740c4e55b12.herokuapp.com/efarmers/getallusers")
         .then(Response=>{
             console.log(Response.data)
             setListofUsers(Response.data);
