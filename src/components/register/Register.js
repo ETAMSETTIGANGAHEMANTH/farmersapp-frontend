@@ -20,7 +20,7 @@ function Register() {
 
       console.log(data);
 
-       axios.post("http://localhost:8080/efarmers/saveUser",data).then(response=>{
+       axios.post("https://farmersapp-backend-d740c4e55b12.herokuapp.com/efarmers/saveUser",data).then(response=>{
         
           navigate("/Login");
           
