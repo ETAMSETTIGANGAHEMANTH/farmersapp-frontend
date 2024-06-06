@@ -17,7 +17,7 @@ function Cart() {
     let[costofallitems ,setCostofallitems]  = useState(0);
 
     let getCart=()=>{
-        axios.get("http://localhost:8080/efarmers/get_cart_items")
+        axios.get("https://farmersapp-backend-d740c4e55b12.herokuapp.com/efarmers/get_cart_items")
         .then(response=>{   //http://localhost:3500/cart-api/get-cart
             console.log(response.data)
              setUsers(response.data)
@@ -55,7 +55,7 @@ function Cart() {
     let removecartitems = (object) => {
       let foodid = object.id;
       console.log(foodid);
-      axios.delete(`http://localhost:8080/efarmers/removeitemfromcart/${foodid}`)
+      axios.delete(`https://farmersapp-backend-d740c4e55b12.herokuapp.com/efarmers/removeitemfromcart/${foodid}`)
         .then(response => {
           console.log(response.data);
           getCart();
